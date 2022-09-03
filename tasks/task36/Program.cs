@@ -6,11 +6,10 @@ int count = 4;
 int[] array = new int[count];
 int sum = 0;
 for (int i = 0; i < array.Length; i++){
-    array[i] = new Random().Next(100);
-    Console.Write(array[i] + "\t");
+    array[i] = new Random().Next(-100, 100);
     if (i % 2 != 0){
         sum += array[i];
     }   
 }
-Console.WriteLine();
+Console.WriteLine(string.Join(", ", array));
 Console.WriteLine($"Сумма элементов на нечетной позиции: {sum}");

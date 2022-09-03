@@ -6,10 +6,9 @@ int[] array = new int[count];
 int countEvent = 0;
 for (int i = 0; i < array.Length; i++){
     array[i] = new Random().Next(100, 1000);
-    Console.Write(array[i] + "\t");
     if (array[i] % 2 == 0){
         countEvent += 1;
     }   
 }
-Console.WriteLine();
+Console.WriteLine(string.Join(", ", array));
 Console.WriteLine($"количество чётных чисел в массиве: {countEvent}");

@@ -3,12 +3,11 @@
 // [3 7 22 2 78] -> 76
 
 int count = 10;
-int[] array = new int[count];
-int max = 0;
-int min = 0;
+double[] array = new double[count];
+double max = 0;
+double min = 0;
 for (int i = 0; i < array.Length; i++ ){
-    array[i] = new Random().Next(-100, 100);
-    Console.Write(array[i] + "\t");
+    array[i] = new Random().Next(100);
     if (i == 0){
         max = array[i];
         min = array[i];
@@ -20,5 +19,5 @@ for (int i = 0; i < array.Length; i++ ){
         min = array[i];
     }   
 }
-Console.WriteLine();
+Console.WriteLine(string.Join(", ", array));
 Console.WriteLine($"Разность максимального {max} и минимального {min} равна: {max - min}");
